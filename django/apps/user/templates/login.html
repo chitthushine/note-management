@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Login</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        {% if messages %}
+        <ul class="messages">
+              {% for message in messages %}
+                  <li{% if message.tags %} class="invalid-feedback"{% endif %}>{{ message }}</li>
+              {% endfor %}
+          </ul>
+        {% endif %}
+        <form method="post">
+          {% csrf_token %}
+          <table>
+            <tr>
+              <td><label for="id_username">Username:</label></td>
+              <td>{{ form.username }}</td>
+              <td class="invalid-feedback">{{ form.username.errors }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_password">Password:</label></td>
+              <td>{{ form.password }}</td>
+              <td class="invalid-feedback">{{ form.password.errors }}</td>
+            </tr>
+          </table>
+
+          <br>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <br>
+        <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a>.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

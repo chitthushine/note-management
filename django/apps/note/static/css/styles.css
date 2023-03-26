@@ -1,0 +1,58 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.container{
+    display: inline;
+}
+
+.nav_item{
+    color: #fff; 
+    font-weight: bold;
+}
+
+.nav_item_left{
+    margin-left: 20px;
+}
+
+.nav_item_right{
+    float: right;
+    margin-right: 10px;
+}
+
+.add-note{
+    color: blue; 
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.logout-btn{
+    color: lightblue;
+}
+
+.invalid-feedback{
+    color: red;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group-right {
+    margin-left: auto;
+}
+  

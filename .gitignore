@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+env
+
+*.sqlite3
+
+django/apps/match/misc
+
+__pycache__
+
+.DS_Store
+*.log
